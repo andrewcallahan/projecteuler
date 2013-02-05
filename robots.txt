@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://andrewcallahan.github.com/projecteuler/sitemap.xml 
