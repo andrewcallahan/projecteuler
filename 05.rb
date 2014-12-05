@@ -8,5 +8,5 @@ prime_factors = {}
   end
 end
 
-puts prime_factors
-prime_factors.reduce(1) { |memo, (k,v)| memo *= k**v }
+prime_factors
+puts prime_factors.reduce(1) { |memo, (k,v)| memo *= k**v }
