@@ -1,67 +1,16 @@
-require 'pp'
+# Make a grid that is one bigger in each direction, since you start at (0,0) and need to go to (20,20)
+a = Array.new(21) { Array.new(21) { 1 } }
 
-array = []
-20.times do |num|
-  new_array = []
-  20.times do
-    new_array << 1
+#This starts with the second to last item in an array, and then goes to the first item (basically, reverse order of array skipping the last item)
+order = (-a.size..-2).to_a.reverse
+
+#Iterate through the array starting with the second to last item in the second to last array
+#Add the values of the options to the right and below to the cell, and move on
+order.each do |num|
+  order.each do |sec_num|
+    a[num][sec_num] = a[num][sec_num+1] + a[num + 1][sec_num]
   end
-  array << new_array
 end
 
-pp array
-
-
-array = [[1]]
-pp array[0][0]
-
-
-
-
-# array = []
-# 20.times do |num|
-#   row = []
-#   if num == 0
-#     row << 1
-#   else
-#     if num == 0
-#       row << 1
-#     else
-#       row << "nope"
-#     end
-#   end
-#   array << row
-# end
-# pp array
-
-array = []
-20.times do |num|
-  row = []
-  if num == 0
-    20.times do
-      row << 1
-    end
-  else
-    if num == 0
-      row << 1
-    else
-      row << array[num-1][num]
-    end
-  end
-  array << row
-end
-pp array
-
-
-# array = []
-# 20.times do |row|
-#   20.times do |num|
-#     if row == 0
-#       array[row][num] << 1
-#     else
-#       array[row][num] = "nope"
-#     end
-#   end
-# end
-# pp array
-
+#This bubbles up until you get the number of paths total in the first cell
+puts a[0][0]

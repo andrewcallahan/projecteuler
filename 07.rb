@@ -29,4 +29,4 @@ until prime_count == 10001
 	n += 1 unless prime_count >= 10001
 end
 
-puts "The #{number_with_delimiter(prime_count.ordinalize)} prime number is #{n}"
+puts n

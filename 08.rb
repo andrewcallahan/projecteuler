@@ -1,5 +1,5 @@
 # Turn number into array
-array = 
+array =
 "73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
 85861560789112949495459501737958331952853208805511
@@ -29,7 +29,7 @@ highest5 = 0
 
 #this was hard to figure out the outer loop
 995.times do
-	
+
 	#inner loop using an array range
 	array[x..y].each do |n|
 		total *= n.to_i
@@ -47,4 +47,4 @@ highest5 = 0
 	end
 end
 
-puts "The greatest product of five consecutive digits in this 1000 digit number is #{highest5}"
+puts highest5

@@ -20,7 +20,6 @@ array = [1]
 until goal > 500
   array << array.last + (array.size + 1)
   @triangle.value = array.last
-  # puts "#{@triangle.value} has #{@triangle.num_of_factors} factors"
   goal = @triangle.num_of_factors
 end
-puts "#{@triangle.value} has #{@triangle.num_of_factors} factors"
+puts @triangle.value

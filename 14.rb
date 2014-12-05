@@ -29,7 +29,7 @@ class Fixnum
 end
 
 array = []
-(1..1000).each do |number|
+(1..1000000).each do |number|
   array << number.collatz
 end
 puts array.index(array.max) + 1
@@ -37,17 +37,15 @@ puts array.index(array.max) + 1
 # 837799
 
 def csd
-    array = []
-    array << self
-    until array.last == 1 do
-      if array.last.odd?
-        array << (array.last*3 + 1)
-      else
-        array << (array.last/2)
-      end
+  array = []
+  array << self
+  until array.last == 1 do
+    if array.last.odd?
+      array << (array.last*3 + 1)
+    else
+      array << (array.last/2)
     end
-    array.count
-    # puts "#{self} has #{array.count} numbers in it's sequence"
   end
-
-puts  13.csd
+  array.count
+  # puts "#{self} has #{array.count} numbers in it's sequence"
+end

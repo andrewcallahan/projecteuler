@@ -14,4 +14,4 @@ until b > 4000000 do
 
 end
 
-puts "the total is #{total}"
+puts total

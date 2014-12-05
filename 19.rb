@@ -7,4 +7,4 @@ count = 0
   end
 end
 
-puts "There are #{count} Sundays"
+puts count

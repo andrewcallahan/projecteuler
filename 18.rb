@@ -27,4 +27,4 @@ order.each do |row|
   end
 end
 
-puts "The answer is......#{a[0][0]}"
+puts a[0][0]

@@ -18,9 +18,6 @@
     c = 1000 - a - b
     if c > b
   if ((a**2) + (b**2)) == c**2
-    puts "#{a} + #{b} + #{c} = #{a+b+c}"
-    puts "#{a**2} + #{b**2} = #{c**2}"
-    puts "#{a**2 + b**2} = #{c**2}"
     puts a*b*c
   end
   end
