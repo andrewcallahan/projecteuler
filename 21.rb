@@ -2,7 +2,6 @@ require 'prime'
 
 def sum_of_factors(num)
   array = []
-
   num.prime_division.map { |arr| arr[1].times{ array << arr[0] } }
 
   totals = []
